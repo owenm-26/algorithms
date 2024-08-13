@@ -1,8 +1,8 @@
 # Algorithm Facts
 quick description
 
-## Purpose
-
 ## Time Complexity
 
 ## Space Complexity
+
+<img src="" alt=""/>

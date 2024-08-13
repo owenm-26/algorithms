@@ -3,7 +3,7 @@ A collection of classic algorithms I implemented to stay fresh
 
 ### Algorithm Complete
 - [x] Binary Search
-- [ ] Merge Sort
+- [x] Merge Sort
 - [ ] Quicksort
 - [ ] Reverse Linked List
 - [ ] BFS
