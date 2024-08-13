@@ -2,15 +2,15 @@
 A collection of classic algorithms I implemented to stay fresh
 
 ### Algorithm Complete
-<input type="checkbox" disabled /> Binary Search </br>
-<input type="checkbox" disabled /> Merge Sort</br>
-<input type="checkbox" disabled /> Quicksort</br>
-<input type="checkbox" disabled /> Reverse Linked List</br>
-<input type="checkbox" disabled /> BFS</br>
-<input type="checkbox" disabled /> DFS</br>
-<input type="checkbox" disabled /> Reverse a Tree</br>
-<input type="checkbox" disabled /> Kruskal's (MST)</br>
-<input type="checkbox" disabled /> Dikhstra's</br>
+- [ ] Binary Search
+- [ ] Merge Sort
+- [ ] Quicksort
+- [ ] Reverse Linked List
+- [ ] BFS
+- [ ] DFS
+- [ ] Reverse a Tree
+- [ ] Kruskal's (MST)
+- [ ] Dijkstra's
 
 ## Purpose
 In order to not forget these important algorithms I created this repository for both reference as well as a way to track how often I implement them from scratch.
