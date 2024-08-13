@@ -2,7 +2,7 @@
 A collection of classic algorithms I implemented to stay fresh
 
 ### Algorithm Complete
-- [ ] Binary Search
+- [x] Binary Search
 - [ ] Merge Sort
 - [ ] Quicksort
 - [ ] Reverse Linked List
