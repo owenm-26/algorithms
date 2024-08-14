@@ -5,8 +5,8 @@ A collection of classic algorithms I implemented to stay fresh
 - [x] Binary Search
 - [x] Merge Sort
 - [x] Quicksort
-- [ ] Reverse Linked List
-- [ ] BFS
+- [x] Reverse Linked List
+- [x] BFS
 - [ ] DFS
 - [ ] Reverse a Tree
 - [ ] Kruskal's (MST)
