@@ -7,7 +7,7 @@ Used to find
 - start of Ford-Fulkerson
 
 ## Time Complexity
-O(n) - explores every node once, doesn't revisit nodes
+O(n+m) - explores every node once and every branch once, doesn't revisit nodes
 
 ## Space Complexity
 O(nm) - the input has n nodes and m branches
