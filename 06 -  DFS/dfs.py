@@ -21,16 +21,21 @@ def iterativeDfs(root: TreeNode):
     stack = [root]
     dist[root] = 0
     parents[root] = []
+    visited = set()
 
     while stack:
         node = stack.pop()
         if node is not None:
+            if node in visited:
+                continue
+            visited.add(node)
             if node.right:
                 if node.right not in parents:
                     parents[node.right] = []
                 parents[node.right].append(node)
                 if node.right not in dist:
                     dist[node.right] = dist[node] + 1
+                
                 stack.append(node.right)
             if node.left:
                 if node.left not in parents:
@@ -38,6 +43,7 @@ def iterativeDfs(root: TreeNode):
                 parents[node.left].append(node)
                 if node.left not in dist:
                     dist[node.left] = dist[node] + 1
+                
                 stack.append(node.left)
     
     # Convert node objects to their string representation for the return dictionary
