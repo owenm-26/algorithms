@@ -73,6 +73,40 @@ def testTraversal(bfsResults, dfsResults):
         assert stringifyResult(dfsResults["random"]) == expected_random
         assert stringifyResult(dfsResults["order"]) == expected_order
         return "DFS Tests Passed!"
+    
+def createTestingWeightedTrees():
+    binary = {
+    'A': {'B': 2, 'C': 5},
+    'B': {'A': 2, 'D': 1, 'E': 3},
+    'C': {'A': 5, 'F': 2},
+    'D': {'B': 1},
+    'E': {'B': 3},
+    'F': {'C': 2}
+}
+    unbalanced = {
+    'A': {'B': 4, 'C': 3},
+    'B': {'A': 4, 'D': 2},
+    'C': {'A': 3, 'E': 6},
+    'D': {'B': 2, 'F': 1},
+    'E': {'C': 6, 'G': 4},
+    'F': {'D': 1},
+    'G': {'E': 4}
+}
+
+    varyingWeights = {
+    'A': {'B': 10, 'C': 1},
+    'B': {'A': 10, 'D': 5, 'E': 1},
+    'C': {'A': 1, 'F': 7, 'G': 3},
+    'D': {'B': 5},
+    'E': {'B': 1},
+    'F': {'C': 7},
+    'G': {'C': 3, 'H': 12},
+    'H': {'G': 12}
+}
+    
+    return binary, unbalanced, varyingWeights
+
+
 
 if __name__ == "__main__":
     root = createTree([3,4,5,6,7,8,9,1])

@@ -8,10 +8,9 @@ A collection of classic algorithms I implemented to stay fresh
 - [x] Reverse Linked List
 - [x] BFS
 - [x] DFS
-- [ ] Reverse a Tree
 - [x] Topological Sort
 - [ ] Kruskal's (MST)
-- [ ] Dijkstra's
+- [x] Dijkstra's
 
 ## Purpose
 In order to not forget these important algorithms I created this repository for both reference as well as a way to track how often I implement them from scratch.
@@ -26,10 +25,9 @@ To implement each of these algorithms once <b>every two months</b>. I later hope
 4. Reverse Linked List
 5. BFS
 6. DFS
-7. Reverse a Tree
-8. Topological Sort
-9. Kruskal's (MST)
-10. Dikhstra's
+7. Topological Sort
+8. Kruskal's (MST)
+9. Dikhstra's
 
 ## Aiding Materials
 [🪧 Algorithm Directory Medium](https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b)</br>
