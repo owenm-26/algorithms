@@ -11,22 +11,36 @@ def bfs(root):
     parents = {}
     layers = {}
     layers[0] = [root]
+    parents[root] = []
+    dist[root] = 0
 
     i = 0
     while layers[i]:
         layers[i+1] = []
         for u in layers[i]:
             if u.left:
-                parents[repr(u.left)] = repr(u)
-                dist[repr(u.left)] = i + 1
+                if u.left not in parents:
+                    parents[u.left] = []
+                parents[u.left].append(u)
+                
+                if u.left not in dist:
+                    dist[u.left] = dist[u] + 1
                 layers[i+1].append(u.left)
             if u.right:
-                parents[repr(u.right)] = repr(u)
-                dist[repr(u.right)] = i + 1
-                layers[i+1].append(u.right)
+                if u.right:
+                    if u.right not in parents:
+                        parents[u.right] = []
+                    parents[u.right].append(u)
+                    
+                    if u.right not in dist:
+                        dist[u.right] = dist[u] + 1
+                    layers[i+1].append(u.right)
         i += 1
     
-    return {'dist': dist, 'parents': parents}
+    return {
+        "dist": {repr(k): v for k, v in dist.items()},
+        "parents": {repr(k): repr(v) for k, v in parents.items()}
+    }
 
 def bfsChecker():
     # print(print_tree(order))
