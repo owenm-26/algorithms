@@ -7,7 +7,7 @@ A collection of classic algorithms I implemented to stay fresh
 - [x] Quicksort
 - [x] Reverse Linked List
 - [x] BFS
-- [ ] DFS
+- [x] DFS
 - [ ] Reverse a Tree
 - [ ] Kruskal's (MST)
 - [ ] Dijkstra's

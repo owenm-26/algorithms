@@ -7,6 +7,7 @@ sys.path.append(parent_dir)
 
 from treeHelpers import createTestingTrees, TreeNode, print_tree, testTraversal
 
+# for simply traversing
 def recursiveDfs(root: TreeNode):
     if root is not None:
         recursiveDfs(root.left)
@@ -17,42 +18,41 @@ def recursiveDfs(root: TreeNode):
 def iterativeDfs(root: TreeNode):
     parents = {}
     dist = {}
-    parents[root] = None
+    stack = [root]
     dist[root] = 0
-    stack = []
-    stack.append(root)
+    parents[root] = None
 
-    while len(stack) > 0:
+    while stack:
         node = stack.pop()
-        if node!= root:
-            dist[node] = dist[parents[node]]+1
         if node is not None:
-            # do right first so that left is on top of stack
             if node.right:
                 parents[node.right] = node
+                dist[node.right] = dist[node] + 1
                 stack.append(node.right)
             if node.left:
                 parents[node.left] = node
+                dist[node.left] = dist[node] + 1
                 stack.append(node.left)
     
-    return {"dist": dist, "parents": parents}
-        
-        
-
-
+    # Convert node objects to their string representation for the return dictionary
+    return {
+        "dist": {repr(k): v for k, v in dist.items()},
+        "parents": {repr(k): repr(v) for k, v in parents.items()}
+    }
 
 def dfsChecker():
+    dfsOrder = iterativeDfs(order)
+    dfsRandom = iterativeDfs(random)
+    dfsBackwards = iterativeDfs(backwards)
+    dfsResult = {"order": dfsOrder, "random": dfsRandom, "backwards": dfsBackwards}
+    print(testTraversal(bfsResults=None, dfsResults=dfsResult))
+
     # print(print_tree(order))
     # print(iterativeDfs(order))
     # print(print_tree(backwards))
     # print(iterativeDfs(backwards))
     # print(print_tree(random))
     # print(iterativeDfs(random))
-    dfsOrder = iterativeDfs(order)
-    dfsRandom = iterativeDfs(random)
-    dfsBackwards = iterativeDfs(backwards)
-    bfsResults = {"order": dfsOrder, "random": dfsRandom, "backwards": dfsBackwards}
-    print(testTraversal(bfsResults=bfsResults, dfsResults=None))
 
 if __name__ == "__main__":
     trees = createTestingTrees()
