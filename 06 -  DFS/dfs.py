@@ -41,9 +41,9 @@ def iterativeDfs(root: TreeNode):
                 stack.append(node.left)
     
     # Convert node objects to their string representation for the return dictionary
-    return {
-        "dist": {repr(k): v for k, v in dist.items()},
-        "parents": {repr(k): repr(v) for k, v in parents.items()}
+    return{
+        "dist": dist,
+        "parents": parents
     }
 
 def dfsChecker():
@@ -61,8 +61,5 @@ def dfsChecker():
     # print(iterativeDfs(random))
 
 if __name__ == "__main__":
-    trees = createTestingTrees()
-    order = trees[0]
-    backwards = trees[1]
-    random = trees[2]
+    order, backwards, random = createTestingTrees()
     dfsChecker()

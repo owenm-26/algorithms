@@ -53,19 +53,25 @@ def createTestingTrees():
 # handles all testing for BFS and DFS
 def testTraversal(bfsResults, dfsResults):
 
+    def stringifyResult(result):
+        return {
+        "dist": {repr(k): v for k, v in result["dist"].items()},
+        "parents": {repr(k): repr(v) for k, v in result['parents'].items()}
+    }
+
     expected_order = {'dist': {'Node 1': 0, 'Node 3': 1, 'Node 2': 1, 'Node 5': 2, 'Node 4': 2, 'Node 7': 2, 'Node 6': 2}, 'parents': {'Node 1': '[]', 'Node 3': '[Node 1]', 'Node 2': '[Node 1]', 'Node 5': '[Node 2]', 'Node 4': '[Node 2]', 'Node 7': '[Node 3]', 'Node 6': '[Node 3]'}}
     expected_backwards = {'dist': {'Node 9': 0, 'Node 7': 1, 'Node 8': 1, 'Node 5': 2, 'Node 6': 2, 'Node 3': 2, 'Node 4': 2}, 'parents': {'Node 9': '[]', 'Node 7': '[Node 9]', 'Node 8': '[Node 9]', 'Node 5': '[Node 8]', 'Node 6': '[Node 8]', 'Node 3': '[Node 7]', 'Node 4': '[Node 7]'}}
     expected_random = {'dist': {'Node 5': 0, 'Node 3': 1, 'Node 6': 1, 'Node 1': 2, 'Node 4': 2, 'Node 9': 2, 'Node 2': 2}, 'parents': {'Node 5': '[]', 'Node 3': '[Node 5]', 'Node 6': '[Node 5]', 'Node 1': '[Node 6]', 'Node 4': '[Node 6]', 'Node 9': '[Node 3]', 'Node 2': '[Node 3]'}}
    
     if bfsResults:
-        assert bfsResults["backwards"] == expected_backwards
-        assert bfsResults["random"] == expected_random
-        assert bfsResults["order"] == expected_order
+        assert stringifyResult(bfsResults["backwards"]) == expected_backwards
+        assert stringifyResult(bfsResults["random"]) == expected_random
+        assert stringifyResult(bfsResults["order"]) == expected_order
         return "BFS Tests Passed!"
     if dfsResults:
-        assert dfsResults["backwards"] == expected_backwards
-        assert dfsResults["random"] == expected_random
-        assert dfsResults["order"] == expected_order
+        assert stringifyResult(dfsResults["backwards"]) == expected_backwards
+        assert stringifyResult(dfsResults["random"]) == expected_random
+        assert stringifyResult(dfsResults["order"]) == expected_order
         return "DFS Tests Passed!"
 
 if __name__ == "__main__":

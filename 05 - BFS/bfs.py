@@ -38,8 +38,8 @@ def bfs(root):
         i += 1
     
     return {
-        "dist": {repr(k): v for k, v in dist.items()},
-        "parents": {repr(k): repr(v) for k, v in parents.items()}
+        "dist": dist,
+        "parents": parents
     }
 
 def bfsChecker():
@@ -58,8 +58,5 @@ def bfsChecker():
 
 
 if __name__ == '__main__':
-    trees = createTestingTrees()
-    order = trees[0]
-    backwards = trees[1]
-    random = trees[2]
+    order, backwards, random = createTestingTrees()
     bfsChecker()
