@@ -9,8 +9,10 @@ A collection of classic algorithms I implemented to stay fresh
 - [x] BFS
 - [x] DFS
 - [x] Topological Sort
-- [ ] Kruskal's (MST)
 - [x] Dijkstra's
+- [x] Union Find
+- [ ] Kruskal's (MST)
+
 
 ## Purpose
 In order to not forget these important algorithms I created this repository for both reference as well as a way to track how often I implement them from scratch.
@@ -26,8 +28,9 @@ To implement each of these algorithms once <b>every two months</b>. I later hope
 5. BFS
 6. DFS
 7. Topological Sort
-8. Kruskal's (MST)
-9. Dikhstra's
+8. Dikhstra's
+9. Union Find
+10. Kruskal's (MST) 
 
 ## Aiding Materials
 [🪧 Algorithm Directory Medium](https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b)</br>
