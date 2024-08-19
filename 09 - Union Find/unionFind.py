@@ -1,7 +1,11 @@
 class DisjointSet:
-    def __init__(self, n) -> None:
-        self.parents = list(range(n))
-        self.ranks = [0] * n
+    def __init__(self, graph) -> None:
+        self.parents = {}
+        self.ranks = {}
+        for u in graph:
+            self.parents[u] = u
+            self.ranks[u] = 0
+        
 
     def find(self, node):
         if self.parents[node] != node:

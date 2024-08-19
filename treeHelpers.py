@@ -106,6 +106,56 @@ def createTestingWeightedTrees():
     
     return binary, unbalanced, varyingWeights
 
+def createTestingKruskalsTrees():
+    simple_tree = {
+    'A': {'B': 1, 'C': 4},
+    'B': {'A': 1, 'D': 2},
+    'C': {'A': 4},
+    'D': {'B': 2}
+}
+    complete_graph = {
+    'A': {'B': 1, 'C': 5, 'D': 4},
+    'B': {'A': 1, 'C': 2, 'D': 3},
+    'C': {'A': 5, 'B': 2, 'D': 1},
+    'D': {'A': 4, 'B': 3, 'C': 1}
+}
+
+    disconnected_graph = {
+    'A': {'B': 1},
+    'B': {'A': 1, 'C': 2},
+    'C': {'B': 2},
+    'D': {'E': 3},
+    'E': {'D': 3}
+}
+    varying_weights_graph = {
+    'A': {'B': 3, 'C': 10, 'D': 4},
+    'B': {'A': 3, 'D': 8, 'E': 5},
+    'C': {'A': 10, 'F': 6},
+    'D': {'A': 4, 'B': 8, 'F': 2},
+    'E': {'B': 5, 'F': 9},
+    'F': {'C': 6, 'D': 2, 'E': 9}
+}
+    
+    sparse_graph = {
+    'A': {'B': 2},
+    'B': {'A': 2, 'C': 3},
+    'C': {'B': 3},
+    'D': {'E': 1},
+    'E': {'D': 1}
+}
+    cyclic_graph = {
+    'A': {'B': 1, 'C': 5},
+    'B': {'A': 1, 'C': 4, 'D': 2},
+    'C': {'A': 5, 'B': 4, 'E': 3},
+    'D': {'B': 2, 'E': 6},
+    'E': {'C': 3, 'D': 6}
+}
+
+
+
+
+    return simple_tree, complete_graph, disconnected_graph, varying_weights_graph, sparse_graph, cyclic_graph
+
 
 
 if __name__ == "__main__":
