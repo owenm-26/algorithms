@@ -53,6 +53,7 @@ def iterativeDfs(root: TreeNode):
     }
 
 def dfsChecker():
+    order, backwards, random = createTestingTrees()
     dfsOrder = iterativeDfs(order)
     dfsRandom = iterativeDfs(random)
     dfsBackwards = iterativeDfs(backwards)
@@ -67,5 +68,5 @@ def dfsChecker():
     # print(iterativeDfs(random))
 
 if __name__ == "__main__":
-    order, backwards, random = createTestingTrees()
+    
     dfsChecker()

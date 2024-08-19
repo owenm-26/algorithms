@@ -160,5 +160,3 @@ def createTestingKruskalsTrees():
 
 if __name__ == "__main__":
     root = createTree([3,4,5,6,7,8,9,1])
-
-    # print_tree(root)

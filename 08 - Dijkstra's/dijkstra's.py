@@ -47,6 +47,7 @@ def dijkstra(graph, source):
     return dist, parents
 
 def dijkstraChecker():
+    binary, unbalanced, varyingWeights = createTestingWeightedTrees()
     assert dijkstra(binary, 'A') == ({'A': 0, 'B': 2, 'D': 3, 'C': 5, 'E': 5, 'F': 7}, {'A': None, 'B': 'A', 'C': 'A', 'D': 'B', 'E': 'B', 'F': 'C'})
     assert dijkstra(unbalanced, 'A') == ({'A': 0, 'C': 3, 'B': 4, 'D': 6, 'F': 7, 'E': 9, 'G': 13}, {'A': None, 'B': 'A', 'C': 'A', 'E': 'C', 'D': 'B', 'F': 'D', 'G': 'E'})
     assert dijkstra(varyingWeights, 'A') == ({'A': 0, 'C': 1, 'G': 4, 'F': 8, 'B': 10, 'E': 11, 'D': 15, 'H': 16}, {'A': None, 'B': 'A', 'C': 'A', 'F': 'C', 'G': 'C', 'H': 'G', 'D': 'B', 'E': 'B'})
@@ -54,5 +55,4 @@ def dijkstraChecker():
     print('Dijkstra tests passed!')
 
 if __name__ == '__main__':
-    binary, unbalanced, varyingWeights = createTestingWeightedTrees()
     dijkstraChecker()

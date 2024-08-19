@@ -31,16 +31,14 @@ def merge(left, right):
     return result
 
 def mergeSortChecker():
-    # print(mergeSort(sorted_array))
-    # print(mergeSort(reverse_sorted_array))
-    # print(mergeSort(random_array))
+    sorted_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    reverse_sorted_array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    random_array = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
     assert mergeSort(sorted_array) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     assert mergeSort(reverse_sorted_array) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     assert mergeSort(random_array) == [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
     print('Merge Sort Tests Passed!')
 
 if __name__ == "__main__":
-    sorted_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    reverse_sorted_array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-    random_array = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+    
     mergeSortChecker()

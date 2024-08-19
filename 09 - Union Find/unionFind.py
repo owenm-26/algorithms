@@ -1,10 +1,7 @@
 class DisjointSet:
-    def __init__(self, graph) -> None:
-        self.parents = {}
-        self.ranks = {}
-        for u in graph:
-            self.parents[u] = u
-            self.ranks[u] = 0
+    def __init__(self, n) -> None:
+        self.parents = list(range(n))
+        self.ranks = [0] * n
         
 
     def find(self, node):
@@ -31,7 +28,7 @@ class DisjointSet:
 def unionFindChecker():
     ds = DisjointSet(4)
     assert ds.parents == [0, 1, 2, 3]
-    ds.union(0, 1)
+    ds.union(0, 1)   
     assert ds.parents == [0, 0, 2, 3]
     ds.union(2, 3)
     assert ds.parents == [0, 0, 2, 2]

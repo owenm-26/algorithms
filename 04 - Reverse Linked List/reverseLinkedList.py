@@ -16,7 +16,10 @@ def reverseLL(head):
     return {"head": trav, "visual": visualizeLL(trav)}
 
 
-def reverseLLChecker():
+def reverseLinkedListChecker():
+    LL1 = createLL([1,2,3,4,6])["head"]
+    emptyLL = createLL([])['head']
+    oneElementLL = createLL([1])['head']
     # print(reverseLL(LL1)['visual'])
     # print(reverseLL(emptyLL)['visual'])
     # print(reverseLL(oneElementLL)['visual'])
@@ -26,9 +29,6 @@ def reverseLLChecker():
     print('Reverse LL Tests Passed!')
 
 if __name__ == "__main__":
-    LL1 = createLL([1,2,3,4,6])["head"]
-    emptyLL = createLL([])['head']
-    oneElementLL = createLL([1])['head']
-    reverseLLChecker()
+    reverseLinkedListChecker()
    
    

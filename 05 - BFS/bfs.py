@@ -43,13 +43,14 @@ def bfs(root):
     }
 
 def bfsChecker():
+    order, backwards, random = createTestingTrees()
     # print(print_tree(order))
     # print(bfs(order))
     # print(print_tree(backwards))
     # print(bfs(backwards))
     # print(print_tree(random))
     # print(bfs(random))
-
+    
     bfsOrder = bfs(order)
     bfsRandom = bfs(random)
     bfsBackwards = bfs(backwards)
@@ -57,6 +58,5 @@ def bfsChecker():
     print(testTraversal(bfsResults=bfsResults, dfsResults=None))
 
 
-if __name__ == '__main__':
-    order, backwards, random = createTestingTrees()
+if __name__ == '__main__': 
     bfsChecker()
