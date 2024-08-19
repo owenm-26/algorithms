@@ -12,6 +12,9 @@ A collection of classic algorithms I implemented to stay fresh
 - [x] Dijkstra's
 - [x] Union Find
 - [x] Kruskal's (MST)
+- [ ] Knapsack
+- [ ] Interval Scheduling
+- [ ] Interval Partitioning
 
 
 ## Purpose
@@ -29,18 +32,6 @@ The script is also designed to work even as more algorithms are added so be sure
 2. <b>Name the file: </b> The name of the directory exactly except as one word in camel case (include apostrophes)
 3. <b>Name the unit test method: </b> `<nameOfFile>Checker`
     - Have all variable definitions inside the test method
-
-## Algorithm List
-1. Binary Search
-2. Merge Sort
-3. Quicksort
-4. Reverse Linked List
-5. BFS
-6. DFS
-7. Topological Sort
-8. Dikhstra's
-9. Union Find
-10. Kruskal's (MST) 
 
 ## Aiding Materials
 [🪧 Algorithm Directory Medium](https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b)</br>
