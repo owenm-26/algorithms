@@ -11,7 +11,7 @@ A collection of classic algorithms I implemented to stay fresh
 - [x] Topological Sort
 - [x] Dijkstra's
 - [x] Union Find
-- [ ] Kruskal's (MST)
+- [x] Kruskal's (MST)
 
 
 ## Purpose
@@ -19,6 +19,16 @@ In order to not forget these important algorithms I created this repository for 
 
 ## Plan
 To implement each of these algorithms once <b>every two months</b>. I later hope to implement these algorithms in multiple languages, but for now I will start with Python since that is what I leetcode with.
+
+## How to Run
+Each algorithm has its own unit tests within its own directory which can be run by running the file within the respective directory. However to test them all at once and see how you've done, run `python unitTestAll` in the root directory and it will return your score.
+</br>
+
+The script is also designed to work even as more algorithms are added so be sure to follow the following conventions so that the script works:
+1. <b>Name the directory:</b>  `## - <Algorithm Name>`
+2. <b>Name the file: </b> The name of the directory exactly except as one word in camel case (include apostrophes)
+3. <b>Name the unit test method: </b> `<nameOfFile>Checker`
+    - Have all variable definitions inside the test method
 
 ## Algorithm List
 1. Binary Search
