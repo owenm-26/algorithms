@@ -21,7 +21,7 @@ A collection of classic algorithms I implemented to stay fresh
 In order to not forget these important algorithms I created this repository for both reference as well as a way to track how often I implement them from scratch.
 
 ## Plan
-To implement each of these algorithms once <b>every two months</b>. I later hope to implement these algorithms in multiple languages, but for now I will start with Python since that is what I leetcode with.
+To implement each of these algorithms once <b>every two months</b>. I later hope to implement these algorithms in multiple languages, but for now I will start with Python since that is what I leetcode with. I am tracking my progress on a [this spreadsheet](https://docs.google.com/spreadsheets/d/170q9fvCbYamV8yjQvRHrC_JoDYNqkfLtpreLlEhg5Js/edit?usp=sharing).
 
 ## How to Run
 Each algorithm has its own unit tests within its own directory which can be run by running the file within the respective directory. However to test them all at once and see how you've done, run `python unitTestAll` in the root directory and it will return your score.
