@@ -54,7 +54,7 @@ def unitTest():
             print(f"Error running {name}: {e}")
         print()
     
-    print(f'***** {tests - len(incorrect)}/{tests} passed *****')
+    print(f'***** {tests - len(incorrect)}/{tests} passed *****\n')
     if len(incorrect) > 0:
         print(f'Failed tests: {incorrect}')
 
