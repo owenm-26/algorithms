@@ -190,6 +190,9 @@ if __name__ == "__main__":
 
     for n in n_vals:
         t_big, t_connect, t_no_iso, t_diff = extract_metrics(data=data[n], n=n)
+
+        # print(f"Max diff: {max(t_diff)}")
+        # print(f"Min diff: {min(t_diff)}")
         
         plot_histogram(t_big=t_big, 
                        t_connect=t_connect, 
@@ -197,8 +200,8 @@ if __name__ == "__main__":
                        t_diff=t_diff,
                        n=n)
         
-        # plot_averages(data=data[n],
-        #               n=n)
+        plot_averages(data=data[n],
+                      n=n)
 
         
 
