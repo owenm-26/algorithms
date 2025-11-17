@@ -1,4 +1,6 @@
 import random
+import matplotlib.pyplot as plt
+
 def standard_chaining(N:int, T:int, n:int) -> list[list[int]]:
     """Randomly inserts n keys from the universe {0, N-1} into a hashmap of size T and returns the largest chain""" 
     M = [[] for _ in range(T)]
@@ -16,7 +18,10 @@ def two_choices_chaining(N:int, T:int, n:int, p:int=2027) ->int:
     for k in K:
         spot1 = k % T
         spot2 = (p*k) % T
-        M[min(len(M[spot1]), len(M[spot2]))].append(k)
+        if len(M[spot1]) < len(M[spot2]):
+            M[spot1].append(k)
+        else:
+            M[spot2].append(k)
     return M
 
 def get_max_length_chain(M:list[list[int]]):
@@ -57,10 +62,31 @@ def print_res(l:list)->None:
         print()
     print("--------")
 
+def plot_max_distribution(vals:list, title:str):
+    # Determine the range of integers for bins
+    min_val, max_val = min(vals), max(vals)
+    bins = range(min_val, max_val + 2)  # +2 to include max value
+    
+    plt.hist(vals, bins=bins, alpha=0.7, edgecolor='black')
+    plt.xticks(range(min_val, max_val + 1))  # Show integer ticks
+    plt.title(title)
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    
+    # Save before showing
+    plt.savefig(f"{title}.png")
+    plt.show()
+
 if __name__ == "__main__":
     standard_res, two_choice_res = run_evaluation_suite()
 
-    print_res(standard_res)
-    print_res(two_choice_res)
+    # print_res(standard_res)
+    # print_res(two_choice_res)
+
+    vals = [100, 500, 1000]
+    for list in [standard_res, two_choice_res]:
+        for i in range(len(vals)):
+            method =  "Standard Chaining" if list == standard_res else "Two Choice Chaining"
+            plot_max_distribution(vals=list[i], title=f"{method} n={vals[i]}")
     
     
